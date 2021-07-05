@@ -1,11 +1,12 @@
 {
 	"name": "UserAgreement",
-	"version": "1.0.1",
+	"version": "1.0.1 - WIND",
 	"author": [
 		"[https://www.mediawiki.org/wiki/User:Kevin.ji Kevin Ji]",
 		"[https://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese]"
+		"Modified by Harry Cadby for WIND"
 	],
-	"url": "https://www.mediawiki.org/wiki/Extension:UserAgreement",
+	"url": "https://github.com/Goldshop/mediawiki-extensions-UserAgreement",
 	"descriptionmsg": "useragreement-desc",
 	"manifest_version": 1,
 	"type": "parserhook",
