@@ -6,7 +6,7 @@
 		"[https://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese]"
 		"Modified by Harry Cadby for WIND"
 	],
-	"url": "https://github.com/Goldshop/mediawiki-extensions-UserAgreement",
+	"url": "https://github.com/Goldshop/UserAgreement",
 	"descriptionmsg": "useragreement-desc",
 	"manifest_version": 1,
 	"type": "parserhook",
