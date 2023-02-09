@@ -1,12 +1,11 @@
 {
-	"name": "UserAgreement",
-	"version": "1.0.1 - WIND",
+	"name": "MWUserAgreement",
+	"version": "Beta - 0.1",
 	"author": [
-		"[https://www.mediawiki.org/wiki/User:Kevin.ji Kevin Ji]",
-		"[https://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese]",
-		"[https://github.com/Goldshop Modified by Harry Cadby for WIND]"
+	    "[https://dafocreative.com DAFO Creative LLC]",
+	    "[https://github.com/Goldshop Harry Cadby]"
 	],
-	"url": "https://github.com/Goldshop/UserAgreement",
+	"url": "https://github.com/dafogary/MWUserAgreement",
 	"descriptionmsg": "useragreement-desc",
 	"manifest_version": 1,
 	"type": "parserhook",

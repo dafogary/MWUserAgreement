@@ -56,7 +56,7 @@ class UserAgreementHooks {
 		$userId = $out->getContext()->getUser()->getId();
 
 		// get the relevant dates for comparison
-		$uaModifiedDate = UserAgreement::getUALastModifiedDate();
+		//$uaModifiedDate = UserAgreement::getUALastModifiedDate();
 		$userUAAcceptedDate = UserAgreement::getUserUAAcceptedDate( $userId );
 		//Added by Harry Cadby Dec 2020
 		$date = date_create();//Finds date today

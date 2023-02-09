@@ -4,7 +4,7 @@
 			"kji"
 		]
 	},
-	"useragreement-desc": "Renders the user agreement after login.",
+	"useragreement-desc": "Renders the user agreement after login. This expires after 12 months and the user is prompted again. Based on the [https://www.mediawiki.org/wiki/Extension:UserAgreement UserAgreement] plugin. Based on work by [https://www.mediawiki.org/wiki/User:Kevin.ji Kevin Ji] and [https://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese].",
 	"useragreement": "",
 	"useragreement-dialog-message": "Yes, I agree",
 	"apihelp-uaAcceptAgreement-description": "Accept the user agreement",

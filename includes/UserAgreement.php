@@ -40,7 +40,7 @@ class UserAgreement {
 	 * @return string The last modified date of the MediaWiki:Useragreement
 	 * page formatted as a unix timestamp or '0' if it has never been modified.
 	 */
-	public static function getUALastModifiedDate() {
+	/*public static function getUALastModifiedDate() {
 		$dbr = wfGetDB( DB_REPLICA );
 		$result = $dbr->select(
 			'page',
@@ -68,7 +68,7 @@ class UserAgreement {
 		}
 
 		return wfTimestamp( TS_UNIX, $uaModifiedDate );
-	}
+	}*/
 
 	/**
 	 * Return the date on which the given user accepted the user agreement
