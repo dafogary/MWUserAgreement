@@ -1,29 +1,44 @@
 {
-	"name": "MWUserAgreement",
-	"version": "Beta - 0.1",
+	"name": "UserAgreement",
+	"version": "2.0.0",
 	"author": [
-	    "[https://dafocreative.com DAFO Creative LLC]",
-	    "[https://github.com/Goldshop Harry Cadby]"
+		"[https://www.mediawiki.org/wiki/User:Kevin.ji Kevin Ji]",
+		"[https://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese]"
 	],
-	"url": "https://github.com/dafogary/MWUserAgreement",
+	"url": "https://www.mediawiki.org/wiki/Extension:UserAgreement",
 	"descriptionmsg": "useragreement-desc",
-	"manifest_version": 1,
+	"manifest_version": 2,
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.35.3"
+		"MediaWiki": ">= 1.39.0"
+	},
+	"SpecialPages": {
+		"UserAgreementAudit": {
+			"class": "MediaWiki\\Extension\\UserAgreement\\SpecialUserAgreementAudit",
+			"services": []
+		}
 	},
 	"MessagesDirs": {
 		"UserAgreement": [
 			"i18n"
 		]
 	},
-	"APIModules": {
-		"uaAcceptAgreement": "ApiUAAcceptAgreement"
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\UserAgreement\\": "includes/"
 	},
 	"AutoloadClasses": {
-		"UserAgreement": "includes/UserAgreement.php",
-		"UserAgreementHooks": "includes/UserAgreementHooks.php",
-		"ApiUAAcceptAgreement": "includes/ApiUAAcceptAgreement.php"
+		"MediaWiki\\Extension\\UserAgreement\\SpecialUserAgreementAudit": "includes/SpecialUserAgreementAudit.php"
+	},
+	"APIModules": {
+		"uaAcceptAgreement": {
+			"class": "MediaWiki\\Extension\\UserAgreement\\ApiUAAcceptAgreement",
+			"services": [
+				"UserAgreementStore"
+			]
+		}
 	},
 	"ResourceModules": {
 		"ext.UserAgreement.render": {
@@ -45,12 +60,33 @@
 		"localBasePath": "",
 		"remoteExtPath": "UserAgreement"
 	},
+	"HookHandlers": {
+		"schema": {
+			"class": "MediaWiki\\Extension\\UserAgreement\\SchemaHooks"
+		},
+		"main": {
+			"class": "MediaWiki\\Extension\\UserAgreement\\MainHooks",
+			"services": [
+				"MainConfig",
+				"UserAgreementStore"
+			]
+		}
+	},
 	"Hooks": {
-		"LoadExtensionSchemaUpdates": [
-			"UserAgreementHooks::loadExtensionSchemaUpdates"
-		],
-		"BeforePageDisplay": [
-			"UserAgreementHooks::addUserAgreement"
-		]
+		"LoadExtensionSchemaUpdates": "schema",
+		"BeforePageDisplay": "main"
+	},
+	"GroupPermissions": {
+		"sysop": {
+			"useragreement-audit": true
+		}
+	},
+	"AvailableRights": [
+		"useragreement-audit"
+	],
+	"config": {
+		"UserAgreement_DaysToReaccept": {
+			"value": 0
+		}
 	}
 }

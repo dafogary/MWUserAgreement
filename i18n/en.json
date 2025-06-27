@@ -4,9 +4,15 @@
 			"kji"
 		]
 	},
-	"useragreement-desc": "Renders the user agreement after login. This expires after 12 months and the user is prompted again. Based on the [https://www.mediawiki.org/wiki/Extension:UserAgreement UserAgreement] plugin. Based on work by [https://www.mediawiki.org/wiki/User:Kevin.ji Kevin Ji] and [https://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese].",
+	"useragreement-desc": "Renders the user agreement after login.",
 	"useragreement": "",
 	"useragreement-dialog-message": "Yes, I agree",
-	"apihelp-uaAcceptAgreement-description": "Accept the user agreement",
-	"apihelp-uaAcceptAgreement-summary": "Accept the user agreement"
+	"apihelp-uaAcceptAgreement-summary": "Accept the user agreement",
+    "useragreementaudit": "User Agreement Audit",
+    "special-useragreementaudit": "User Agreement Audit",
+    "useragreement-audit-intro": "This page shows a list of users who have accepted the user agreement.",
+    "useragreement-audit-empty": "No users have accepted the user agreement yet.",
+    "useragreement-audit-header-user": "Username",
+    "useragreement-audit-header-email": "Email",
+    "useragreement-audit-header-timestamp": "Acceptance Date"
 }

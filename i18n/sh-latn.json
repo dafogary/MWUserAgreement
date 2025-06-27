@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vlad5250"
+			"Winston Sung"
 		]
 	},
 	"useragreement-desc": "Daje korisnički ugovor nakon prijave.",
-	"apihelp-uaAcceptAgreement-description": "Prihvati korisnički ugovor",
+	"useragreement-dialog-message": "Da, prihvatam",
 	"apihelp-uaAcceptAgreement-summary": "Prihvati korisnički ugovor"
 }
